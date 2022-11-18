@@ -1,7 +1,5 @@
 from django.db import models
 
-
-
 #Work arrangement class, 4 types with percentage 
 class WorkArrangement(models.Model):
     type = ( 
@@ -28,6 +26,7 @@ class TeamLeader(Employee):
 #Team class
 class Team(models.Model):
     id = models.BigAutoField(primary_key=True)
+    members = models.ManyToManyField(Employee, through='TeamEmployee')
 
 class TeamEmployee(models.Model):
     employeeId = models.ForeignKey(Employee, on_delete=models.CASCADE)
