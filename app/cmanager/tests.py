@@ -32,12 +32,11 @@ class WarrangementTest(TestCase):
 
 class EmployeeTest(TestCase):
 
-    
     def create_employee(
         self,
         name="Employee 1",
         hourly_rate=10,
-       # workArrangement=wa, 
+       # workArrangement=wa,
         created_at=timezone.now()):
             return Employee.objects.create(
                 name=name,
@@ -47,7 +46,7 @@ class EmployeeTest(TestCase):
             )
 
     def test_employee_creation(self):
-        
+
         w = self.create_employee(
             name="Employee 1",
             hourly_rate=10,
