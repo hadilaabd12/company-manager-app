@@ -22,7 +22,6 @@ class Person(models.Model):
 # Work arrangement class, 4 types with percentage
 class WorkArrangement(models.Model):
     id = models.BigAutoField(primary_key=True)
-    name = models.CharField(max_length=255, null=True)
     ft = 40
     pt_75 = 30
     pt_50 = 20
