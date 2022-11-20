@@ -60,10 +60,10 @@ class Employee(Person):
     )
     isLead = models.BooleanField(default=False, null=True)
 
-    def create(self, name, hourly_rate, workArrangement, created_at=None):
+    def create(self, name, hourly_rate, created_at=None):
         self.name = name
         self.hourly_rate = hourly_rate
-        self.workArrangement = workArrangement
+        # self.workArrangement = workArrangement
         if created_at is None:
             self.created_at = datetime.utcnow()
         else:

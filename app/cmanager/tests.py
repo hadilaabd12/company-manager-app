@@ -32,19 +32,18 @@ class WarrangementTest(TestCase):
 
 class EmployeeTest(TestCase):
 
-    workArrangement=WorkArrangement(type=40)
-    WorkArrangement.save(workArrangement)
+    
     def create_employee(
         self,
         name="Employee 1",
         hourly_rate=10,
-        workArrangement=workArrangement, 
+       # workArrangement=wa, 
         created_at=timezone.now()):
             return Employee.objects.create(
                 name=name,
                 hourly_rate=hourly_rate,
-                workArrangement=workArrangement,
-                created_at=timezone.now()
+                # workArrangement=workArrangement,
+                created_at=created_at
             )
 
     def test_employee_creation(self):
@@ -52,10 +51,11 @@ class EmployeeTest(TestCase):
         w = self.create_employee(
             name="Employee 1",
             hourly_rate=10,
-            workArrangement=WorkArrangement(type=40)
+            # workArrangement=WorkArrangement(type=40)
         )
         self.assertTrue(isinstance(w, Employee))
         self.assertEqual(w.__unicode__(), w.name)
+        # self.assertEqual(w.__unicode__(),w.workArrangement.type)
 
 
 class TeamTest(TestCase):
