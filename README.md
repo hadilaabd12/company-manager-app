@@ -10,6 +10,8 @@ djangorestframework: 3.14.0<br>
 
 ## <B>UML Diagrams Presentation</B> <br> <br>
 
+![image](https://user-images.githubusercontent.com/91690443/202927276-d6e14287-5be5-492d-b8be-074d1f22f57c.png)
+
 
 
 
