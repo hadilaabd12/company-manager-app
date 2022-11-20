@@ -10,6 +10,7 @@ class Person(models.Model):
     address = models.CharField(max_length=255, null=True)
     email = models.CharField(max_length=255, null=True)
     created_at = models.DateTimeField(null=True)
+
     def create(self, name, created_at=None):
         self.name = name
         if created_at is None:
@@ -21,7 +22,6 @@ class Person(models.Model):
 # Work arrangement class, 4 types with percentage
 class WorkArrangement(models.Model):
     id = models.BigAutoField(primary_key=True)
-    name = models.CharField(max_length=255, null=True)
     ft = 40
     pt_75 = 30
     pt_50 = 20
@@ -44,7 +44,7 @@ class WorkArrangement(models.Model):
             self.created_at = datetime.utcnow()
         else:
             self.created_at = created_at
-    
+
     def __unicode__(self):
         return self.type
 
@@ -74,7 +74,7 @@ class Employee(Person):
             return (self.workArrangement * self.hourlyRate) * (11/10)
         else:
             return self.workArrangement * self.hourlyRate
-    
+
     def __unicode__(self):
         return self.name
 
