@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from .views import PersonViewSet, EmployeeViewSet, WarrangementViewSet, TeamViewSet
 
 urlpatterns = [
     path('person', PersonViewSet.as_view()),
