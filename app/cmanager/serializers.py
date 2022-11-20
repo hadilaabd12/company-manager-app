@@ -20,12 +20,6 @@ class WorkArrangementSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class EmployeeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Employee
-        fields = "__all__"
-
-
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
