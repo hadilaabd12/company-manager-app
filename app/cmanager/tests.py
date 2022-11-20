@@ -1,8 +1,6 @@
 from django.test import TestCase
 from .models import WorkArrangement, Employee, Team, TeamLeader, TeamEmployee
 from django.utils import timezone
-from django.core.urlresolvers import reverse
-from whatever.forms import WhateverForm
 
 # models test
 class WarrangementTest(TestCase):
